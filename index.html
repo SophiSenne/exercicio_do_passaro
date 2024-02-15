@@ -61,6 +61,7 @@
             //iniciar a animação do pássaro verde
             passarinho.anims.play('fly', true);
 
+
         }
 
 
@@ -71,10 +72,6 @@
             if (passarinho.x === 100 && passarinho.y === 100){
                 passarinho.setFlip(false,true);
                 passarinho.ida = true;
-                //uso do for
-                for (let i = 0; i < 3; i ++){
-                    console.log(i);
-                }
             }
 
             if (passarinho.x < 700 && passarinho.ida === true){
@@ -86,6 +83,9 @@
             if (passarinho.x === 700 && passarinho.y === 100){
                 passarinho.setFlip(false,false);
                 passarinho.desce = true;
+                for (let i = 1; i <= 5; i ++){
+                    passarinho.x = passarinho.x - i * 10;
+                }
             }
 
             if (passarinho.y < 500 && passarinho.desce === true){
@@ -122,5 +122,3 @@
 
 </body>
 </html>
-
-
